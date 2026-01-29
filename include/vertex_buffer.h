@@ -7,15 +7,15 @@ namespace gl
 
 class glVertexBuffer
 {
-	private:
-		GLuint ID;
+private:
+	GLuint m_Id;
 
-	public:
-		glVertexBuffer(const void* data, GLuint size);
-		~glVertexBuffer();
+public:
+	glVertexBuffer(const void* data, GLuint size);
+	~glVertexBuffer();
 
-		void bind();
-		void unbind();
+	void Bind() const;
+	void Unbind() const;
 };
 
 }
