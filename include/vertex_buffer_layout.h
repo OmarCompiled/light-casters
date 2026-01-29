@@ -35,13 +35,13 @@ public:
 	template<>
 	void Push<float>(GLuint count) {
 		m_Elements.push_back({GL_FLOAT, count, GL_FALSE});
-		m_Stride += sizeof(GLfloat) * count;
+		m_Stride += count * sizeof(GLfloat);
 	}
 
 	template<>
 	void Push<GLuint>(GLuint count) {
 		m_Elements.push_back({GL_UNSIGNED_INT, count, GL_FALSE});
-		m_Stride += sizeof(GLuint) * count;
+		m_Stride += count * sizeof(GLuint);
 	}
 
 	inline const std::vector<glVertexBufferLayoutElement>& GetElements() const {return m_Elements;}
