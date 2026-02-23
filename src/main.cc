@@ -67,8 +67,8 @@ main() {
     cubeModel = glm::translate(cubeModel, glm::vec3(0.0f));
 
     glm::mat4 lightModel = glm::mat4(1.0f);
-    lightModel = glm::translate(lightModel, glm::vec3(1.0f));
     lightModel = glm::scale(lightModel, glm::vec3(0.5f));
+    lightModel = glm::translate(lightModel, glm::vec3(1.5f));
     /* End Math */
 
     while(!glfwWindowShouldClose(window)) {
